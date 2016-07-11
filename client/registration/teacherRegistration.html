@@ -1,0 +1,113 @@
+<motogat-header></motogat-header>
+
+<div class="container margintop">
+<!-- Registration form for new Teacher-->
+<form class="form-horizontal" name="teacherRegister" novalidate>
+
+	<!-- Login information -->
+  <fieldset id="id-fieldset">
+        <legend>Login Information</legend>
+  	    <div class="form-group">
+	        <label for="teacherName" class="col-sm-2 control-label">User Name</label>
+	          <div class="col-sm-6">
+	            <input type="text" ng-model = "vm.teacherRegistration.name" name = "name" class="form-control" id="teacherName" placeholder="" required>
+              <span ng-show="teacherRegister.name.$error.required && teacherRegister.name.$dirty">Name is required.</span>
+	          </div>
+  	    </div>
+      	<div class="form-group">
+    	    <label for="teacherEmail" class="col-sm-2 control-label">Email</label>
+    	    <div class="col-sm-6">
+    	      <input type="email" ng-model = "vm.teacherRegistration.email" name = "email" class="form-control" id="teacherEmail" placeholder="" required>
+            <span ng-show="teacherRegister.email.$error.required && teacherRegister.email.$dirty">Email is required.</span>
+            <span ng-show="teacherRegister.email.$error.email">Invalid email address.</span>
+    	    </div>
+      	</div>
+      	<div class="form-group">
+    	    <label for="teacherPass" class="col-sm-2 control-label">Password</label>
+    	    <div class="col-sm-6">
+    	      <input type="password" ng-model = "vm.teacherRegistration.pass1" class="form-control" id="teacherPass" placeholder="" required>
+    	    </div>
+    	</div>
+      <div class="form-group">
+  	    <label for="teacherPassConf" class="col-sm-2 control-label">Confirm Password</label>
+  	    <div class="col-sm-6">
+  	      <input type="password" ng-model = "vm.teacherRegistration.pass2" class="form-control" id="teacherPassConf" placeholder="" required>
+  	    </div>
+        <p ng-show = "vm.teacherRegistration.pass1 !== vm.teacherRegistration.pass2" > password do not match</p>
+     	</div>
+  </fieldset>
+<!-- End of Login information -->
+
+<!-- Profile parameters -->
+  <fieldset>
+      <legend>Profile Information</legend>
+
+      <div class="form-group">
+        <label for="teacherFName" class="col-sm-2 control-label">First Name</label>
+          <div class="col-sm-6">
+            <input type="text" ng-model = "vm.teacherRegistration.fname" class="form-control" id="teacherFName" placeholder="" required>
+          </div>
+      </div>
+      <div class="form-group">
+        <label for="teacherLName" class="col-sm-2 control-label">Last Name</label>
+          <div class="col-sm-6">
+            <input type="text" ng-model = "vm.teacherRegistration.lname" class="form-control" id="teacherLName" placeholder="" required>
+          </div>
+      </div>
+
+      <div class="form-group">
+        <label for="teacherPhone" class="col-sm-2 control-label">Phone number</label>
+          <div class="col-sm-6">
+            <input type='tel' pattern='[\+]\d{3}[\(]\d{3}[\)]\d{4}[\-]\d{4}'
+            ng-model = "vm.teacherRegistration.phoneNum" class="form-control" id="teacherPhone" placeholder="" required>
+          </div>
+      </div>
+      <div class="form-group">
+        <label for="teacherDob" class="col-sm-2 control-label">D.O.B</label>
+          <div class="col-sm-6">
+            <input type="date" ng-model = "vm.teacherRegistration.dob" class="form-control" id="teacherDob" placeholder="" required>
+          </div>
+      </div>
+      <div class="form-group">
+        <label for="teacherProffesion" class="col-sm-2 control-label">Proffesion</label>
+          <div class="col-sm-6">
+            <input type="text" ng-model = "vm.teacherRegistration.proffesion" class="form-control" id="teacherProffesion" placeholder="" required>
+          </div>
+      </div>
+
+
+    </fieldset>
+<!-- End of Recruiter profile parameters -->
+
+<!-- Profile Legal terms plans -->
+<fieldset>
+      <legend>Terms & Conditions</legend>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-md-10">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" ng-model = "vm.teacherRegistration.TC">
+              <a href='#' ng-click = "vm.displayTC('lg')"> I've read the terms and conditions</a>
+            </label>
+          </div>
+        </div>
+      </div>
+</fieldset>
+<!-- End of Recruiter legal terms plans -->
+
+
+<!-- Profile Register action -->
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" ng-click="vm.registerTeacher()"  class="btn btn-primary" id="">Register</button>
+    </div>
+  </div>
+
+  <div ng-show="vm.error" class="row" >
+        <p>{{ vm.error }}</p>
+  </div>
+</form>
+<!-- End of registration form -->
+</div>
+<motogat-footer></motogat-footer>

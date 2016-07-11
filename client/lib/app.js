@@ -22,8 +22,8 @@
 
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
-//import angularBootstrap from 'angular-ui-bootstrap';
-//import angularUiRouter from 'angular-ui-router'
+import angularBootstrap from 'angular-ui-bootstrap';
+import angularUiRouter from 'angular-ui-router'
 //import angularPromiser from 'angular-meteor-promiser';
 //import 'angular-filter';
 //import uiRouter from 'angular-ui-router';
@@ -34,7 +34,7 @@ import angularMeteor from 'angular-meteor';
 //angular.module('brgo', ['angularMeteor','ui.router','ui.bootstrap']);
 //angular.module('brgo', [angularMeteor, 'ui.router','accounts.ui','ui.bootstrap']);
 //angular.module('motogat', [angularMeteor,angularUiRouter,'accounts.ui','angular.filter',angularBootstrap,angularPromiser]);
-angular.module('motogat', [angularMeteor]);
+angular.module('motogat', [angularMeteor, angularUiRouter, angularBootstrap]);
 
 
 function onReady() {

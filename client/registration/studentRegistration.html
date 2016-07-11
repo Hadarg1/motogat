@@ -1,0 +1,92 @@
+<motogat-header></motogat-header>
+<div class="container margintop">
+<!-- Registration form -->
+<form class="form-horizontal" name="studentRegister" novalidate>
+
+	<!-- Login information -->
+  <fieldset id="id-fieldset">
+        <legend>Login Information</legend>
+  	    <div class="form-group">
+	        <label for="inputStudentName" class="col-sm-2 control-label">User Name</label>
+	          <div class="col-sm-6">
+	            <input type="text" ng-model = "vm.studentRegistration.name" name = "name" class="form-control" id="inputStudentName" placeholder="Name" required>
+              <span ng-show="studentRegister.name.$error.required && studentRegister.name.$dirty">Name is required.</span>
+	          </div>
+  	    </div>
+      	<div class="form-group">
+    	    <label for="inputStudentEmail" class="col-sm-2 control-label">Email</label>
+    	    <div class="col-sm-6">
+    	      <input type="email" ng-model = "vm.studentRegistration.email" name = "email" class="form-control" id="inputStudentEmail" placeholder="Email address" required>
+            <span ng-show="studentRegister.email.$error.required && studentRegister.email.$dirty">Email is required.</span>
+            <span ng-show="studentRegister.email.$error.email">Invalid email address.</span>
+    	    </div>
+      	</div>
+      	<div class="form-group">
+    	    <label for="inputStudentPass" class="col-sm-2 control-label">Password</label>
+    	    <div class="col-sm-6">
+    	      <input type="password" ng-model = "vm.studentRegistration.pass1" class="form-control" id="inputStudentPass" placeholder="Password" required>
+    	    </div>
+    	</div>
+      <div class="form-group">
+  	    <label for="inputStudentPassConf" class="col-sm-2 control-label">Confirm Passwor</label>
+  	    <div class="col-sm-6">
+  	      <input type="password" ng-model = "vm.studentRegistration.pass2" class="form-control" id="inputStudentPassConf" placeholder="Confirm Password" required>
+  	    </div>
+        <p ng-show = "pass1 !== pass2" > password do not match</p>
+     	</div>
+  </fieldset>
+<!-- End of Login information -->
+
+<!-- Profile parameters -->
+  <fieldset>
+      <legend>Profile Information</legend>
+
+      <div class="form-group">
+        <label for="inputStudentName" class="col-sm-2 control-label">First Name</label>
+          <div class="col-sm-6">
+            <input type="text" ng-model = "vm.studentRegistration.fname" class="form-control" id="inputStudentName" placeholder="" required>
+          </div>
+      </div>
+      <div class="form-group">
+        <label for="inputStudentLName" class="col-sm-2 control-label">Last Name</label>
+          <div class="col-sm-6">
+            <input type="text" ng-model = "vm.studentRegistration.lname" class="form-control" id="inputStudentLName" placeholder="" required>
+          </div>
+      </div>
+
+
+    </fieldset>
+<!-- End of Recruiter profile parameters -->
+
+<!-- Profile Legal terms plans -->
+<fieldset>
+      <legend>Terms & Conditions</legend>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-md-10">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" ng-model = "vm.studentRegistration.TC">
+              <a href='#' ng-click = "vm.displayTC('lg')"> I've read the terms and conditions</a>
+            </label>
+          </div>
+        </div>
+      </div>
+</fieldset>
+<!-- End of Recruiter legal terms plans -->
+
+
+<!-- Profile Register action -->
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" ng-click="vm.registerStudent()"  class="btn btn-primary" id="studentRegistrationButton">Register</button>
+    </div>
+  </div>
+
+  <div ng-show="vm.error" class="row" >
+        <p>{{ vm.error }}</p>
+  </div>
+</form>
+<!-- End of registration form -->
+</div>
+<motogat-footer></motogat-footer>
