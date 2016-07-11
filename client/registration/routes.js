@@ -21,5 +21,10 @@ function routerConfig($stateProvider, $urlRouterProvider,$locationProvider) {
       controller: 'TeacherRegistrationCtrl',
       controllerAs: 'vm'
     })
-
+    .state('superteacherRegistration', {
+      url:'/newSuperTeacher',
+      templateUrl: 'client/registration/superTeacherRegistration.html',
+      controller: 'SuperTeacherRegistrationCtrl',
+      controllerAs: 'vm'
+    })
 }
