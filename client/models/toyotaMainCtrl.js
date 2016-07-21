@@ -1,6 +1,6 @@
 angular
   .module('motogat')
-  .controller('AutoTeachCtrl', function($state,$scope,$reactive) {
+  .controller('ToyotaCtrl', function($state,$scope,$reactive) {
 
     var vm = this;
     $reactive(vm).attach($scope);

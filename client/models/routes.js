@@ -21,6 +21,12 @@ function routerConfig($stateProvider, $urlRouterProvider,$locationProvider) {
       controller: 'AutoTeachCtrl',
       controllerAs: 'vm'
     })
+    .state('ToyotaMain', {
+      url:'/Toyota',
+      templateUrl: 'client/models/toyotaMain.html',
+      controller: 'ToyotaCtrl',
+      controllerAs: 'vm'
+    })
     .state('AutoTeachComponentMain', {
       url:'/Autoteach/Component',
       params: {
