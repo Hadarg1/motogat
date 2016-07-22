@@ -32,8 +32,8 @@ function routerConfig($stateProvider, $urlRouterProvider,$locationProvider) {
       params: {
             comp: null
         },
-      templateUrl: 'client/models/autoTeachComponentMain.html',
-      controller: 'AutoTeachComponentCtrl',
+      templateUrl: 'client/models/ComponentMain.html',
+      controller: 'ComponentCtrl',
       controllerAs: 'vm'
     })
     .state('ComponentMain.general', {
@@ -41,8 +41,8 @@ function routerConfig($stateProvider, $urlRouterProvider,$locationProvider) {
       params: {
             comp: null
         },
-      templateUrl: 'client/models/autoTeachComponentGeneralDesc.html',
-      controller: 'AutoTeachComponentGeneralDescCtrl',
+      templateUrl: 'client/models/ComponentGeneralDesc.html',
+      controller: 'ComponentGeneralDescCtrl',
       controllerAs: 'vm'
     })
     .state('ComponentMain.connector', {
@@ -50,8 +50,8 @@ function routerConfig($stateProvider, $urlRouterProvider,$locationProvider) {
       params: {
             comp: null
         },
-      templateUrl: 'client/models/autoTeachComponentConnector.html',
-      controller: 'AutoTeachComponentConnectorCtrl',
+      templateUrl: 'client/models/ComponentConnector.html',
+      controller: 'ComponentConnectorCtrl',
       controllerAs: 'vm'
     })
     .state('ComponentMain.wiring', {
@@ -59,8 +59,8 @@ function routerConfig($stateProvider, $urlRouterProvider,$locationProvider) {
       params: {
             comp: null
         },
-      templateUrl: 'client/models/autoTeachComponentWiring.html',
-      controller: 'AutoTeachComponentWiringCtrl',
+      templateUrl: 'client/models/ComponentWiring.html',
+      controller: 'ComponentWiringCtrl',
       controllerAs: 'vm'
     })
     .state('ComponentMain.location', {
@@ -68,8 +68,8 @@ function routerConfig($stateProvider, $urlRouterProvider,$locationProvider) {
       params: {
             comp: null
         },
-      templateUrl: 'client/models/autoTeachComponentLocation.html',
-      controller: 'AutoTeachComponentLocationCtrl',
+      templateUrl: 'client/models/ComponentLocation.html',
+      controller: 'ComponentLocationCtrl',
       controllerAs: 'vm'
     })
 }

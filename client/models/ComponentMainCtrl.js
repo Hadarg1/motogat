@@ -1,6 +1,6 @@
 angular
   .module('motogat')
-  .controller('AutoTeachComponentWiringCtrl', function($state,$stateParams,$scope,$reactive) {
+  .controller('ComponentCtrl', function($state,$stateParams,$scope,$reactive) {
             //$scope.num = 0;
     var vm = this;
     $reactive(vm).attach($scope);
