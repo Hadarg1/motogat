@@ -28,7 +28,7 @@ function routerConfig($stateProvider, $urlRouterProvider,$locationProvider) {
       controllerAs: 'vm'
     })
     .state('ComponentMain', {
-      url:'/Component',
+      url:'/:model/Component',
       params: {
             comp: null
         },

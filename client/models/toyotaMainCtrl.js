@@ -5,6 +5,8 @@ angular
     var vm = this;
     $reactive(vm).attach($scope);
 
+    vm.model = 'Toyota';
+
     vm.helpers({
      isLoggedIn() {
        return !!Meteor.userId();
@@ -17,7 +19,7 @@ angular
     vm.goComponet = function(compo){
       console.log('the comp to send');
       console.log(compo);
-      $state.go("ComponentMain.general",{comp:compo});
+      $state.go("ComponentMain.general",{comp:compo,model:vm.model});
     };
 
 });

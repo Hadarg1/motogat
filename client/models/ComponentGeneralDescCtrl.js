@@ -5,6 +5,7 @@ angular
     var vm = this;
     $reactive(vm).attach($scope);
 
+    console.log($stateParams);
     vm.componentName = $stateParams.comp;
 
 
