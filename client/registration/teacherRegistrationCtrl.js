@@ -7,6 +7,13 @@ angular
 
     vm.animationsEnabled = true;
     vm.teacherRegistration = {};
+    var currentDate = new Date();
+    console.log('original current data');
+    console.log(currentDate);
+    d = currentDate.setDate(currentDate.getDate() - 1);
+    var expiration = new Date(d);
+    console.log('exyended current data');
+    console.log(expiration);
     vm.teacherRegistration.type = 'Teacher';
 
     vm.registerTeacher = () => {
@@ -21,6 +28,7 @@ angular
             phone: vm.teacherRegistration.phoneNum,
             dob: vm.teacherRegistration.dob,
             proffesion: vm.teacherRegistration.proffesion,
+            expiration: expiration,
             tcAcknowladge: vm.teacherRegistration.TC
             }
           },

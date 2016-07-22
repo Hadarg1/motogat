@@ -7,6 +7,9 @@ angular
 
     vm.animationsEnabled = true;
     vm.studentRegistration = {};
+    var currentDate = new Date();
+    d = currentDate.setDate(currentDate.getDate() + 30);
+    var expiration = new Date(d);
     vm.studentRegistration.type = 'Student';
 
     vm.registerStudent = () => {
@@ -18,6 +21,7 @@ angular
             type: vm.studentRegistration.type,
             firstName: vm.studentRegistration.fname,
             lastName: vm.studentRegistration.lname,
+            expiration: expiration,
             tcAcknowladge: vm.studentRegistration.TC
             }
           },
