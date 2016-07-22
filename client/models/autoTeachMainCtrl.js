@@ -17,7 +17,7 @@ angular
     vm.goComponet = function(compo){
       console.log('the comp to send');
       console.log(compo);
-      $state.go("AutoTeachComponentMain.general",{comp:compo});
+      $state.go("ComponentMain.general",{comp:compo});
     };
 
 });

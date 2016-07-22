@@ -27,8 +27,8 @@ function routerConfig($stateProvider, $urlRouterProvider,$locationProvider) {
       controller: 'ToyotaCtrl',
       controllerAs: 'vm'
     })
-    .state('AutoTeachComponentMain', {
-      url:'/Autoteach/Component',
+    .state('ComponentMain', {
+      url:'/Component',
       params: {
             comp: null
         },
@@ -36,8 +36,8 @@ function routerConfig($stateProvider, $urlRouterProvider,$locationProvider) {
       controller: 'AutoTeachComponentCtrl',
       controllerAs: 'vm'
     })
-    .state('AutoTeachComponentMain.general', {
-      url:'/Autoteach/Component/general/:comp',
+    .state('ComponentMain.general', {
+      url:'/general/:comp',
       params: {
             comp: null
         },
@@ -45,8 +45,8 @@ function routerConfig($stateProvider, $urlRouterProvider,$locationProvider) {
       controller: 'AutoTeachComponentGeneralDescCtrl',
       controllerAs: 'vm'
     })
-    .state('AutoTeachComponentMain.connector', {
-      url:'/Autoteach/Component/connector/:comp',
+    .state('ComponentMain.connector', {
+      url:'/connector/:comp',
       params: {
             comp: null
         },
@@ -54,8 +54,8 @@ function routerConfig($stateProvider, $urlRouterProvider,$locationProvider) {
       controller: 'AutoTeachComponentConnectorCtrl',
       controllerAs: 'vm'
     })
-    .state('AutoTeachComponentMain.wiring', {
-      url:'/Autoteach/Component/wiring/:comp',
+    .state('ComponentMain.wiring', {
+      url:'/wiring/:comp',
       params: {
             comp: null
         },
@@ -63,8 +63,8 @@ function routerConfig($stateProvider, $urlRouterProvider,$locationProvider) {
       controller: 'AutoTeachComponentWiringCtrl',
       controllerAs: 'vm'
     })
-    .state('AutoTeachComponentMain.location', {
-      url:'/Autoteach/Component/location/:comp',
+    .state('ComponentMain.location', {
+      url:'/location/:comp',
       params: {
             comp: null
         },
