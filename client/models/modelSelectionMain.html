@@ -6,32 +6,32 @@
   	  </div>
 </div>
 
+<!-- <ul>
+  <li class="motogatModels" ng-repeat="model in vm.modelList">
+      <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <img src="{{model.smallpic}}" ui-sref="AutoTeachMain" class="" alt="User Management">
+              <div class="caption">
+                  <h3 ui-sref="AutoTeachMain">{{model.name}}</h3>
+              </div>
+            </div>
+          </div>
+      </div>
+  </li>
+</ul> -->
+
 <div class="container">
 
-      <div class="row">
+      <div  ng-repeat="model in vm.modelList">
         <div class="col-md-4">
             <div class="caption">
-              <h3 ui-sref="AutoTeachMain">AutoTeach</h3>
+              <h3 ui-sref="AutoTeachMain">{{model.name}}</h3>
             </div>
-            <img src="images/Autotech.jpg" ui-sref="AutoTeachMain" class="" alt="User Management">
+            <img src="{{model.smallpic}}" ui-sref="AutoTeachMain" class="" alt="User Management">
           <!--width="260px" height="200px">-->
         </div>
-
-        <div class="col-md-4">
-          <div class="caption">
-            <h3 ui-sref="ToyotaMain">Toyota</h3>
-          </div>
-          <img src="images/toyota.jpg" ui-sref="ToyotaMain" class="" alt="User Management">
-        </div>
-
-        <div class="col-md-4">
-          <div class="caption">
-            <h3>Hyundai</h3>
-          </div>
-          <img src="images/Hyundai.png" class="" alt="User Management">
-        </div>
       </div>
-
-    </div>
+</div>
 
 <motogat-footer></motogat-footer>

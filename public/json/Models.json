@@ -1,0 +1,11 @@
+[{
+		"appid": 1,
+		"name": "ToyotaZR1",
+		"smallpic": "images/_ToyotaZR1.jpg",
+		"maindiagarm": "images/ToyotaZR1/Main.jpg"
+	}, {
+		"appid": 2,
+		"name": "AutoTech",
+		"smallpic": "images/_AutoTech.jpg",
+		"maindiagarm": "images/AutoTech/main.jpg"
+	}]
