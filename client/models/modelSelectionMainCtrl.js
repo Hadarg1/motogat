@@ -25,4 +25,10 @@ angular
      }
     });
 
+    vm.gotoMainModel = function(model) {
+
+        console.log(model.name);
+        $state.go("ComponentMain",{model:model.name,diagram:model.maindiagarm});
+      };
+
 });

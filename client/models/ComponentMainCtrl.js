@@ -5,7 +5,8 @@ angular
     var vm = this;
     $reactive(vm).attach($scope);
 
-    vm.componentName = $stateParams.comp;
+    vm.componentName = $stateParams.model;
+    vm.diagram = $stateParams.diagram
 
 
 

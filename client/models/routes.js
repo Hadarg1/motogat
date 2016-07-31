@@ -30,7 +30,8 @@ function routerConfig($stateProvider, $urlRouterProvider,$locationProvider) {
     .state('ComponentMain', {
       url:'/:model/Component',
       params: {
-            comp: null
+            comp: null,
+            diagram: null
         },
       templateUrl: 'client/models/ComponentMain.html',
       controller: 'ComponentCtrl',
