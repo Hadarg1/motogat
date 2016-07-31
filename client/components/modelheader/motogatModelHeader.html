@@ -1,0 +1,54 @@
+<nav id="id-navbar" class="navbar  navbar-fixed-top">
+
+
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+       <img alt="Brand" src="images/Motogat.gif" width=100px height=30Cpx;>
+     </a>
+
+    <!--  <a id="id-navbar-brand" class="navbar-brand">motOGat</a>-->
+    </div>
+
+
+      <div class="navbar-collapse collapse" id="navbar">
+        <ul class="nav navbar-nav">
+          <li ui-sref-active="active"><a class="id-button" ui-sref="app">Home <span class="sr-only">(current)</span></a></li>
+          <li ui-serf-active="active"><a class="id-button" ui-sref="ModelSelection">Model Selection</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">components<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Class Management</a></li>
+              <li><a href="#">Theoretical Lesson</a></li>
+              <li><a href="#">Troubleshooting Lessons</a></li>
+            </ul>
+        </li>
+          <li ui-serf-active="active"><a class="id-button" ui-sref="#">About</a></li>
+          <li ui-sref-active="active"><a class="id-button" ui-sref="#">Contact</a></li>
+
+        </ul>
+
+
+
+        <form ng-hide="header.isLoggedIn" class="navbar-form navbar-right">
+          <div class="form-group">
+            <input type="text" ng-model="header.emailuser" placeholder="Email / User name" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="password" ng-model="header.password" placeholder="Password" class="form-control">
+          </div>
+          <button type="submit" class="btn id-login-button motogat-btn-primary" ng-click = "header.signin()">Sign in</button>
+          <button type="button" class="btn id-login-button motogat-btn-primary" ng-click = "header.registration('md')">Sign up</button>            <!--<button type="submit" class="btn id-login-button brgo-btn-primary" ui-sref="app.registration">Sign up</button>-->
+        </form>
+
+        <form ng-show="header.isLoggedIn" class="navbar-form navbar-right">
+          <div class="form-group">
+            <a href='#' ng-click = "header.updateProfile(md)">Wellcome {{header.currentUser.username}}</a>
+          </div>
+        </form>
+
+      </div>
+
+        <hr id="id-hr">
+  </div>
+</nav>

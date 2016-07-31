@@ -28,7 +28,8 @@ angular
     vm.gotoMainModel = function(model) {
 
         console.log(model.name);
-        $state.go("ComponentMain",{model:model.name,diagram:model.maindiagarm});
+        console.log(model.appid);
+        $state.go("ComponentMain",{model:model.name,diagram:model.maindiagarm,appid:model.appid});
       };
 
 });

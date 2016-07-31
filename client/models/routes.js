@@ -5,8 +5,8 @@ angular
 
 /** @ngInject */
 /* Domain Expert routing */
-function routerConfig($stateProvider, $urlRouterProvider,$locationProvider) {
-  $locationProvider.html5Mode(true);
+function routerConfig($stateProvider) {
+
   $stateProvider
 
     .state('ModelSelection', {
@@ -28,10 +28,11 @@ function routerConfig($stateProvider, $urlRouterProvider,$locationProvider) {
       controllerAs: 'vm'
     })
     .state('ComponentMain', {
-      url:'/:model/Component',
+      url:'/maincomponent/:model',
       params: {
             comp: null,
-            diagram: null
+            diagram: null,
+            appid: null,
         },
       templateUrl: 'client/models/ComponentMain.html',
       controller: 'ComponentCtrl',
