@@ -1,11 +1,14 @@
 angular
   .module('motogat')
-  .controller('ModelSelectionCtrl', function($http,$state,$scope,$reactive) {
+  .controller('ModelSelectionCtrl', function($http,$state,$scope,utilsService,$reactive) {
 
     var vm = this;
     $reactive(vm).attach($scope);
 
 
+    vm.filename = 'json/Models.json';
+    vm.jsonFile = utilsService.getjsonfile(vm.filename);
+    
 
     HTTP.get(Meteor.absoluteUrl("json/Models.json"), function(err,result) {
 
@@ -27,8 +30,6 @@ angular
 
     vm.gotoMainModel = function(model) {
 
-        console.log(model.name);
-        console.log(model.appid);
         $state.go("ComponentMain",{model:model.name,diagram:model.maindiagarm,appid:model.appid});
       };
 
