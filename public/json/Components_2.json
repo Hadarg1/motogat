@@ -1,5 +1,5 @@
-{
-	"ComponentList": [{
+[
+	{
 		"appid": 1,
 		"name": "Crankshaft position sensor (Hall Effect)",
 		"label": "S05",
@@ -89,5 +89,5 @@
 		"name": "Electronic Control Unit",
 		"label": "ECU",
 		"mainimage": "images/AutoTech/components/23/Pic.jpg"
-	}]
-}
+	}
+]

@@ -1,5 +1,5 @@
-{
-	"ComponentList": [{
+[
+	{
 		"appid": 1,
 		"name": "VVT Sensor (Intake Side)",
 		"label": "B21",
@@ -114,5 +114,5 @@
 		"name": "BAT/IG",
 		"label": "BAT/IG",
 		"mainimage": "images/ToyotaZR1/components/23/Pic.jpg"
-	}]
-}
+	}
+]

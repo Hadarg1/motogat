@@ -1,6 +1,6 @@
 angular
   .module('motogat')
-  .controller('motogatModelHeader', function($state,$scope,$reactive,$uibModal) {
+  .controller('motogatModelHeader', function($http,$state,$scope,$reactive,$uibModal) {
             //$scope.num = 0;
     var vm = this;
     $reactive(vm).attach($scope);
@@ -10,6 +10,15 @@ angular
     vm.animationsEnabled = true;
     vm.emailuser = '';
     vm.password = '';
+    vm.complist = '';
+
+
+    vm.componentFile = 'json/Components_' + vm.appid + '.json';
+
+
+    HTTP.get(Meteor.absoluteUrl(vm.componentFile), function(err,result) {
+        vm.complist = result.data;
+       });
 
 
     vm.helpers({
