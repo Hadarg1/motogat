@@ -2,9 +2,17 @@
 <form class="form-horizontal" name="AutoTeachWiring" novalidate>
 
 <h2> Wiring of {{vm.componentName}}</h2>
-<p> Wiring Wiring Wiring Wiring Wiring Wiring
-Wiring Wiring Wiring Wiring Wiring Wiring Wiring Wiring
-Wiring Wiring Wiring Wiring Wiring Wiring Wiring Wiring</p>
 
+<div class="container">
+
+      <div  ng-repeat="wiring in vm.generalDesc.wiring">
+        <div class="row">
+          <img ng-src="{{wiring.pic}}"   class="" alt="No Picture found" width="600px" height="200px">
+          <img ng-src="{{wiring.txt}}" class="" alt="No text found">
+          <br>
+          <!--width="260px" height="200px">-->
+        </div>
+      </div>
+</div>
 </form>
 </section>

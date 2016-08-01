@@ -1,6 +1,6 @@
 angular
   .module('motogat')
-  .controller('motogatModelHeader', function($http,$state,$scope,$reactive,$uibModal) {
+  .controller('motogatModelHeader', function($http,$state,$scope,$reactive,$uibModal,$rootScope) {
             //$scope.num = 0;
     var vm = this;
     $reactive(vm).attach($scope);
@@ -31,6 +31,11 @@ angular
      }
     });
 
+    vm.goComponet = function(comp){
+
+      $rootScope.compname = comp.name;
+      $state.go("ComponentHub.General",{model:$rootScope.model,comp:comp.name,compid:comp.appid,appid:vm.appid});
+    };
 
 //Sign In function
     vm.signin = function () {

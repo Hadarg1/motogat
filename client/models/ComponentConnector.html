@@ -2,9 +2,18 @@
 <form class="form-horizontal" name="AutoTeachConnector" novalidate>
 
 <h2> Connector of {{vm.componentName}}</h2>
-<p> Connector Connector Connector Connector Connector Connector
-Connector Connector Connector Connector Connector Connector Connector Connector
-Connector Connector Connector Connector Connector Connector Connector Connector</p>
+
+<div class="container">
+
+      <div  ng-repeat="connector in vm.generalDesc.connector">
+        <div class="row">
+          <img ng-src="{{connector.pic}}"   class="" alt="No Picture found" width="600px" height="200px">
+          <img ng-src="{{connector.txt}}" class="" alt="No text found">
+          <br>
+          <!--width="260px" height="200px">-->
+        </div>
+      </div>
+</div>
 
 </form>
 </section>

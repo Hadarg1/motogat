@@ -2,9 +2,17 @@
 <form class="form-horizontal" name="AutoTeachGeneralInfo" novalidate>
 
 <h2> General Description of {{vm.componentName}}</h2>
-<p> Description Description Description Description Description Description
-Description Description Description Description Description Description Description Description
-Description Description Description Description Description Description Description Description</p>
 
+<div class="container">
+
+      <div  ng-repeat="gendesc in vm.generalDesc.genraldetails">
+        <div class="row">
+          <img ng-src="{{gendesc.pic}}"   class="" alt="User Management" width="600px" height="200px">
+          <img ng-src="{{gendesc.txt}}" class="" alt="User Management">
+          <br>
+          <!--width="260px" height="200px">-->
+        </div>
+      </div>
+</div>
 </form>
 </section>

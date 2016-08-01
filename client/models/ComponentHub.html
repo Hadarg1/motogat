@@ -1,0 +1,30 @@
+<motogat-modelheader appid="vm.appid"></motogat-modelheader>
+<br>
+
+      <!-- SIDE MENU -->
+      <br>
+      <br>
+        <nav id="leftmenu">
+          <h3>Components detail Information</h3>
+          <ul>
+            <li ui-sref-active="active" ng-click="vm.goComponetGeneral()"><a>General Details</a></li>
+            <li ui-sref-active="active" ng-click="vm.goComponetConnector()"><a>Connector</a></li>
+            <li ui-sref-active="active" ng-click="vm.goComponetWiring()"><a>Wiring</a></li>
+            <li ui-sref-active="active" ng-click="vm.goComponetLocation()"><a>Location</a></li>
+          </ul>
+          <h3> Navigating</h3>
+          <ul>
+            <li ui-sref-active="active" ui-sref="AutoTeachMain"><a>AutoTeach diagram</a></li>
+            <li ui-sref-active="active" ui-sref="ToyotaMain"><a>Toyota diagram</a></li>
+          </ul>
+        </nav>
+
+        <div class="container">
+<!-- WORKING/DISPLAY AREA -->
+      <!--<section>-->
+        <div ui-view></div>
+      <!--</section>-->
+
+    </div>
+
+<motogat-footer></motogat-footer>

@@ -15,22 +15,10 @@ function routerConfig($stateProvider) {
       controller: 'ModelSelectionCtrl',
       controllerAs: 'vm'
     })
-    .state('AutoTeachMain', {
-      url:'/Autoteach',
-      templateUrl: 'client/models/autoTeachMain.html',
-      controller: 'AutoTeachCtrl',
-      controllerAs: 'vm'
-    })
-    .state('ToyotaMain', {
-      url:'/Toyota',
-      templateUrl: 'client/models/toyotaMain.html',
-      controller: 'ToyotaCtrl',
-      controllerAs: 'vm'
-    })
     .state('ComponentMain', {
       url:'/maincomponent/:model',
       params: {
-            comp: null,
+            model: null,
             diagram: null,
             appid: null,
         },
@@ -38,37 +26,61 @@ function routerConfig($stateProvider) {
       controller: 'ComponentCtrl',
       controllerAs: 'vm'
     })
-    .state('ComponentMain.general', {
-      url:'/general/:comp',
+    .state('ComponentHub', {
+      url:'/componentHub/:model',
       params: {
-            comp: null
+            model: null,
+            appid: null,
+            compid: null,
+            companame: null
+        },
+      templateUrl: 'client/models/ComponentHub.html',
+      controller: 'ComponentHubCtrl',
+      controllerAs: 'vm'
+    })
+    .state('ComponentHub.General', {
+      url:'/generalDesc/:comp',
+      params: {
+            model: null,
+            comp: null,
+            compid: null,
+            appid: null
         },
       templateUrl: 'client/models/ComponentGeneralDesc.html',
       controller: 'ComponentGeneralDescCtrl',
       controllerAs: 'vm'
     })
-    .state('ComponentMain.connector', {
-      url:'/connector/:comp',
-      params: {
-            comp: null
-        },
-      templateUrl: 'client/models/ComponentConnector.html',
-      controller: 'ComponentConnectorCtrl',
-      controllerAs: 'vm'
-    })
-    .state('ComponentMain.wiring', {
+    .state('ComponentHub.Wiring', {
       url:'/wiring/:comp',
       params: {
-            comp: null
+            model: null,
+            comp: null,
+            compid: null,
+            appid: null
         },
       templateUrl: 'client/models/ComponentWiring.html',
       controller: 'ComponentWiringCtrl',
       controllerAs: 'vm'
     })
-    .state('ComponentMain.location', {
+    .state('ComponentHub.Connector', {
+      url:'/connector/:comp',
+      params: {
+        model: null,
+        comp: null,
+        compid: null,
+        appid: null
+        },
+      templateUrl: 'client/models/ComponentConnector.html',
+      controller: 'ComponentConnectorCtrl',
+      controllerAs: 'vm'
+    })
+    .state('ComponentHub.Location', {
       url:'/location/:comp',
       params: {
-            comp: null
+        model: null,
+        comp: null,
+        compid: null,
+        appid: null
         },
       templateUrl: 'client/models/ComponentLocation.html',
       controller: 'ComponentLocationCtrl',

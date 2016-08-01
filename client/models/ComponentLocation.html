@@ -2,9 +2,18 @@
 <form class="form-horizontal" name="AutoTeachLocation" novalidate>
 
 <h2> Location of {{vm.componentName}}</h2>
-<p> Location Location Location Location Location Location
-Location Location Location Location Location Location Location Location
-Location Location Location Location Location Location Location Location</p>
+
+<div class="container">
+
+      <div  ng-repeat="location in vm.generalDesc.location">
+        <div class="row">
+          <img ng-src="{{location.pic}}"   class="" alt="No Picture found" width="600px" height="200px">
+          <img ng-src="{{location.txt}}" class="" alt="No text found">
+          <br>
+          <!--width="260px" height="200px">-->
+        </div>
+      </div>
+</div>
 
 </form>
 </section>

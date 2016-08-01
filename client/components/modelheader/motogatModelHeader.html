@@ -20,7 +20,7 @@
             <ul class="dropdown-menu">
               <!-- <li ng-repeat="comp in vm.complist"> -->
               <li ng-repeat="comp in modelheader.complist">
-                <a href="#">{{comp.name}} - ({{comp.label}})</a>
+                <a href="#" ng-click="modelheader.goComponet(comp)">{{comp.name}} - ({{comp.label}})</a>
               </li>
             </ul>
         </li>
