@@ -34,6 +34,7 @@ angular
     vm.goComponet = function(comp){
 
       $rootScope.compname = comp.name;
+
       $state.go("ComponentHub.General",{model:$rootScope.model,comp:comp.name,compid:comp.appid,appid:vm.appid});
     };
 
