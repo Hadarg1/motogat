@@ -18,6 +18,7 @@ angular
 
     HTTP.get(Meteor.absoluteUrl(vm.componentFile), function(err,result) {
         vm.complist = result.data;
+        $scope.$apply();
        });
 
 

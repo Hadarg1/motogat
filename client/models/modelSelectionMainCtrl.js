@@ -8,11 +8,12 @@ angular
 
     vm.filename = 'json/Models.json';
     vm.jsonFile = utilsService.getjsonfile(vm.filename);
-    
+
 
     HTTP.get(Meteor.absoluteUrl("json/Models.json"), function(err,result) {
 
         vm.modelList = result.data;
+        $scope.$apply();
 
        });
 
