@@ -1,0 +1,30 @@
+{
+		"genraldetails": [{
+			"pic": "images/AutoTech/components/18/GeneralDescription/1Pic.JPG",
+			"txt": ""
+		}, {
+			"pic": "images/AutoTech/components/18/GeneralDescription/2Pic.JPG",
+			"txt": ""
+		}, {
+			"pic": "images/AutoTech/components/18/GeneralDescription/3Pic.jpg",
+			"txt": ""
+		}, {
+			"pic": "images/AutoTech/components/18/GeneralDescription/4Pic.JPG",
+			"txt": ""
+		}, {
+			"pic": "images/AutoTech/components/18/GeneralDescription/5Pic.JPG",
+			"txt": ""
+		}],
+		"connector": [],
+		"location": [],
+		"wiring": [{
+			"pic": "images/AutoTech/components/18/Wiring/1Pic.jpg",
+			"txt": ""
+		},{
+			"pic": "images/AutoTech/components/18/Wiring/2Pic.JPG",
+			"txt": ""
+		},{
+			"pic": "images/AutoTech/components/18/Wiring/3Pic.JPG",
+			"txt": ""
+		}]
+}

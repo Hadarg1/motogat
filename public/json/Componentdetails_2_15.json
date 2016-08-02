@@ -1,0 +1,21 @@
+{
+		"genraldetails": [{
+			"pic": "images/AutoTech/components/15/GeneralDescription/1Pic.jpg",
+			"txt": ""
+		}, {
+			"pic": "images/AutoTech/components/15/GeneralDescription/2Pic.jpg",
+			"txt": ""
+		}, {
+			"pic": "images/AutoTech/components/15/GeneralDescription/3Pic.jpg",
+			"txt": ""
+		}],
+		"connector": [],
+		"location": [],
+		"wiring": [{
+			"pic": "images/AutoTech/components/15/Wiring/1Pic.jpg",
+			"txt": ""
+		},{
+			"pic": "images/AutoTech/components/15/Wiring/2Pic.JPG",
+			"txt": ""
+		}]
+}
