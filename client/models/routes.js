@@ -38,6 +38,18 @@ function routerConfig($stateProvider) {
       controller: 'ComponentHubCtrl',
       controllerAs: 'vm'
     })
+    .state('ComponentDetailHub', {
+      url:'/componentDetail/:model',
+      params: {
+            model: null,
+            appid: null,
+            compid: null,
+            comp: null
+        },
+      templateUrl: 'client/models/ComponentDetailsHub.html',
+      controller: 'ComponentDetailsHubCtrl',
+      controllerAs: 'vm'
+    })
     .state('ComponentHub.General', {
       url:'/generalDesc/:comp',
       params: {

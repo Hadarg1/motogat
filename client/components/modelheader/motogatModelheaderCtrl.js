@@ -35,7 +35,9 @@ angular
 
       $rootScope.compname = comp.name;
 
-      $state.go("ComponentHub.General",{model:$rootScope.model,comp:comp.name,compid:comp.appid,appid:vm.appid});
+
+    //  $state.go("ComponentHub.General",{model:$rootScope.model,comp:comp.name,compid:comp.appid,appid:vm.appid});
+      $state.go("ComponentDetailHub",{model:$rootScope.model,comp:comp.name,compid:comp.appid,appid:vm.appid});
     };
 
 //Sign In function
